@@ -405,6 +405,6 @@ label.margin-toggle:not(.sidenote-number) {
 
 @media only screen and (max-width: 1300px) {
     .graphics {
-        visibility: hidden;
+        display: none;
     }
 }
