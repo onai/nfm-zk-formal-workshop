@@ -1,211 +1,250 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.7.2/tufte.min.css" />
+    <link rel="stylesheet" href="tufte.min.css" />
     <style>
     </style>
 </head>
 
 <body>
     <article>
-        <h1>Workshop on Formal Methods for Cryptographic Proofs</h1>
-        <blockquote>
-            12th NASA Formal Methods Symposium (NFM 2020)<br />
-            <strong><u>Location: </u></strong> NASA Ames Research Center, Moffett Field, CA, USA<br />
-            <strong><u>Conference Dates: </u></strong>May 11-15, 2020<br />
-        </blockquote>
-        <section>
-            <h2>High Level Description:</h2>
-            <p>
-                The aim of this workshop is to explore the intersection of (i) cryptographic proofs, and
-                (ii) formal methods. The former is seeing increased adoption in a variety of settings like decentralized
-                ledgers. In the absence of verified higher-level proofs of these algorithm implementations, all
-                participants
-                can face signficiant consequences. For those specializing in formal-verificant, this venue will provide
-                an overview of proofs, applications, and opportunities. For those specializing in cryptography, this
-                event will provide an opportunity to explore how formal methods can be used to harden and improve
-                existing implementations.
-            </p>
-        </section>
+        <div>
+            <span style="float:right; padding-left:3.5rem;" class="graphics">
+                <img src="schorr.png" style="vertical-align:middle;padding-right:2.5rem;padding-left:2.5rem;">
+                <img src="logo.png" style="width:120px;vertical-align:middle;">
+            </span>
+            <h1 style="width: 50%;">Workshop on Formal Methods for Cryptographic Proofs</h1>
 
-        <section>
-            <h2>Important Dates:</h2>
-            <ul>
-                <li><strong><u>19-Jan-2020:</u></strong> Submission deadline</li>
-                <li><strong><u>31-Jan-2020:</u></strong> Notification of acceptance</li>
-                <li><strong><u>May 11-15, 2020:</u></strong> Nasa Formal Methods 2020 Conference Dates</li>
-            </ul>
-        </section>
+            <blockquote>
+                12th NASA Formal Methods Symposium (NFM 2020)<br />
+                <strong><u>Location: </u></strong> NASA Ames Research Center, Moffett Field, CA, USA<br />
+                <strong><u>Conference Dates: </u></strong>May 11-15, 2020<br />
+            </blockquote>
+        </div>
 
-        <h2>Speaker List:</h2>
-        <ul>TBA</ul>
-        <h2>Call for Papers:</h2>
-        <section>
-            <p>
-                The workshop on formal methods for cryptographic proofs requests paper submissions on applying formal
-                methods for cryptographic proofs. The workshop is held in conjunction with the NASA Formal Methods
-                conference in May
-                2020. The focus areas are:
-            </p>
-            <ul>
-                <li>Formal methods to assist construction of high-level cryptographic proofs.</li>
-                <li>Case studies of bugs in existing cryptographic proof implementations.</li>
-                <li>Theme papers exploring implementations, opportunities, and discussing urgent focus areas.</li>
-            </ul>
-            <p>
-                Submissions are due <strong><u>19-Jan-2020</u></strong>. Accepted submissions will be notified by email
-                on
-                <strong><u>31-Jan-2020</u></strong>.
-            </p>
-            <p>
-                The accepted papers will be displayed in a poster session. Select papers will be chosen for an oral
-                presentation.
-            </p>
-        </section>
-        <h2>Call for Speakers:</h2>
-        <ul>TBA</ul>
-        <section>
-            <h2>Workshop Statement:</h2>
-            <p>
-                Several cryptographic proof techniques such as SNARKs [<a href="#6">6</a>], Bulletproofs [<a
-                    href="#1">1</a>], STARKs [<a href="#5">5</a>], class group
-                accumulators [<a href="#0">0</a>], and DARKs [<a href="#4">4</a>] have emerged or greatly advanced over
-                the past two
-                years. They allow
-                proofs
-                of
-                sufficiently complicated facts that it has become desirable to formally verify that the proofs indeed
-                prove
-                what
-                they intend.
-                This is an exciting new application area for verification and the goal of this workshop is to bring
-                together
-                practitioners from formal methods and cryptography, exploring opportunities and challenges at the
-                intersection
-                of formal methods and cryptographic proofs.
-            </p>
-            <p>
-                The recent rapid progress in cryptographic proofs has been driven largely by interest in distributed
-                ledger
-                technology (blockchains). However, applications of these proof techniques range beyond this area to
-                encompass
-                assurance of proper functioning of components in complex machinery against Byzantine faults,
-                guaranteeing
-                authenticity and validity of distributed sensor readings, enabling decentralized communications,
-                protecting
-                sensitive data while allowing its analysis, and more. While the Boeing 777 and 787 flight control
-                systems,
-                the
-                SpaceX Dragon, and other recent advanced systems incorporate Byzantine fault tolerance into their
-                design,
-                today's newer cryptographic proof techniques enable far more sophistication and space/time efficiency,
-                at
-                the
-                cost of greater software complexity. Formal methods can ensure that the additional complexity does not
-                mean
-                reduced correctness.
-            </p>
-            <p>
-                Zero knowledge (ZK) proofs comprise one cryptographic proof category of particular interest. A ZK proof
-                allows
-                one party to confirm if another party is aware of a value X without revealing X or any other information
-                besides
-                the other party's awareness of X. The complexity of modern ZK proofs make it hard to detect if the
-                proofs
-                are
-                constructed correctly and if the verification steps of ZK proofs are implemented correctly. An invalid
-                implementation can accept invalid proofs; this can pose serious consequences depending on the
-                application.
-                Correct-by-construction and formally verified implementations are highly desirable.
-            </p>
-            <p>
-                Recent efforts have successfully brought formal methods to the broader field of cryptography. For
-                instance,
-                the
-                Everest project [<a href="#3">3</a>] implements a formally verified set of cryptographic primitives like
-                ciphers, MACs,
-                elliptic
-                curve signatures, and hash functions exposed via a standard interface. The project may one day provide a
-                drop-in
-                replacement for popular cryptographic toolkits. In the absence of such formal verification, simple
-                implementation bugs have led to severe vulnerabilities in popular cryptographic packages like OpenSSL.
-                The
-                Heartbleed bug [<a href="#2">2</a>] for instance, was a buffer over-read, and a significant number of
-                public facing
-                web-servers
-                were impacted. Efforts to verify memory access allow the full cryptographic stack to be verified.
-            </p>
-            <p>
-                Even if progress is being made towards verification of cryptographic primitives, higher-level
-                cryptographic
-                proof implementations remain unverified, despite trends accelerating broad adoption of these proofs in
-                the
-                near
-                future. This workshop brings together researchers and practitioners in relevant formal methods -
-                including
-                dependent typing and more - and cryptographic proofs to establish greater interaction between the
-                fields,
-                identify
-                key opportunities of mutual interest, and accelerate the development and adoption of formal methods for
-                cryptographic proofs. Emphasis is further placed on talks and papers that discuss broad cross-cutting
-                themes
-                around cryptographic proofs for Byzantine fault tolerance, data validation, and authentication;
-                practical
-                dependently typed proofs; and other formal methods relevant potentially applicable to cryptographic
-                proofs.
+        <div class="column">
+            <section>
+                <h2>High Level Description:</h2>
+                <p>
+                    The aim of this workshop is to explore the intersection of (i) cryptographic proofs, and
+                    (ii) formal methods. The former is seeing increased adoption in a variety of settings like
+                    decentralized
+                    ledgers. In the absence of verified higher-level proofs of these algorithm implementations, all
+                    participants
+                    can face signficiant consequences. For those specializing in formal-verificant, this venue will
+                    provide
+                    an overview of proofs, applications, and opportunities. For those specializing in cryptography, this
+                    event will provide an opportunity to explore how formal methods can be used to harden and improve
+                    existing implementations.
+                </p>
+            </section>
+            <section>
+                <h2>Important Dates:</h2>
+                <ul>
+                    <li><strong><u>19-Jan-2020:</u></strong> Submission deadline</li>
+                    <li><strong><u>31-Jan-2020:</u></strong> Notification of acceptance</li>
+                    <li><strong><u>May 11-15, 2020:</u></strong> Nasa Formal Methods 2020 Conference Dates</li>
+                </ul>
+            </section>
 
-            </p>
-            REFERENCES:
-            <ul>
-                <li>[<a name="0">0</a>]: <a href="https://eprint.iacr.org/2018/1188.pdf">Batching Techniques for
-                        Accumulators with Applications to IOPs and Stateless
-                        Blockchains</a> <i>IACR Cryptology ePrint Archive: Report 2018/1188.</i> Boneh, Dan. et al.
-                </li>
-                <li>[<a name="1">1</a>]: <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs: Short proofs for
-                        confidential transactions and more</a> <i>2018
-                        IEEE
-                        Symposium on Security and Privacy (SP). IEEE, 2018.</i> Bunz, Benedikt, et al. </li>
-                <li>[<a name="2">2</a>]: <a
-                        href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160">CVE-2014-0160. OpenSSL
-                        Heartbleed.</a> <i>Webpage:
-                        <a
-                            href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160">https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160</a>
-                        Accessed on 11/13/2019</i></li>
-                <li>[<a name="3">3</a>]: <a
-                        href="http://drops.dagstuhl.de/opus/volltexte/2017/7119/pdf/LIPIcs-SNAPL-2017-1.pdf">Everest:
-                        Towards a Verified, Drop-in Replacement of HTTPS</a> <i>Proceedings of
-                        the
-                        Summit on Advances in Programming Languages (SNAPL). 2017.</i> Bhargavan, Karthikeyan et al.
-                </li>
-                <li>[<a name="4">4</a>]: <a
-                        href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.3183&rep=rep1&type=pdf">On
-                        diophantine complexity and statistical zero-knowledge arguments</a>
-                    <i>International Conference on the Theory and Application of Cryptology and Information Security.
-                        Springer, Berlin, Heidelberg, 2003.</i> Lipmaa, Helger.</li>
-                <li>[<a name="5">5</a>]: <a href="https://eprint.iacr.org/2018/046.pdf">Scalable, transparent, and
-                        post-quantum secure computational integrity</a>
-                    <i>IACR
-                        Cryptology ePrint Archive 2018 (2018): 46.</i> Ben-Sasson, Eli, et al. </li>
-                <li>[<a name=" 6">6</a>]: <a href="https://eprint.iacr.org/2013/879.pdf">Succinct Non-Interactive Zero
-                        Knowledge for a von Neumann Architecture</a>
-                    <i>23rd
-                        USENIX Security Symposium (USENIX Security 14). 2014.</i> Ben-Sasson, Eli, et al.</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Links:</h2>
-            <ul>
-                <li>
-                    <a href="https://ti.arc.nasa.gov/events/nfm-2020/">NASA Formal Methods - 2020</a>
-                </li>
-            </ul>
-        </section>
-        <section>
-            <h2>Contact:</h2>
-            <ul>
-                <li><a href="mailto:fmcp@onai.com">fmcp@onai.com</a></li>
-            </ul>
-        </section>
+            <section>
+                <h2>Speaker List:</h2>
+                <ul>TBA</ul>
+            </section>
+
+            <section>
+                <h2>Call for Papers:</h2>
+                <p>
+                    The workshop on formal methods for cryptographic proofs requests paper submissions on applying
+                    formal
+                    methods for cryptographic proofs. The workshop is held in conjunction with the NASA Formal Methods
+                    conference in May
+                    2020. The focus areas are:
+                </p>
+                <ul>
+                    <li>Formal methods to assist construction of high-level cryptographic proofs.</li>
+                    <li>Case studies of bugs in existing cryptographic proof implementations.</li>
+                    <li>Theme papers exploring implementations, opportunities, and discussing urgent focus areas.</li>
+                </ul>
+                <p>
+                    Submissions are due <strong><u>19-Jan-2020</u></strong>. Accepted submissions will be notified by
+                    email
+                    on
+                    <strong><u>31-Jan-2020</u></strong>.
+                </p>
+                <p>
+                    The accepted papers will be displayed in a poster session. Select papers will be chosen for an oral
+                    presentation.
+                </p>
+            </section>
+            <section>
+                <h2>Call for Speakers:</h2>
+                <ul>TBA</ul>
+            </section>
+
+            <section>
+                <h2>Links:</h2>
+                <ul>
+                    <li>
+                        <a href="https://ti.arc.nasa.gov/events/nfm-2020/">NASA Formal Methods - 2020</a>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2>Contact:</h2>
+                <ul>
+                    <li><a href="mailto:fmcp@onai.com">fmcp@onai.com</a></li>
+                </ul>
+            </section>
+        </div>
+        <div class="column">
+            <section>
+                <h2>Workshop Statement:</h2>
+                <p>
+                    Several cryptographic proof techniques such as SNARKs [<a href="#6">6</a>], Bulletproofs [<a
+                        href="#1">1</a>], STARKs [<a href="#5">5</a>], class group
+                    accumulators [<a href="#0">0</a>], and DARKs [<a href="#4">4</a>] have emerged or greatly advanced
+                    over
+                    the past two
+                    years. They allow
+                    proofs
+                    of
+                    sufficiently complicated facts that it has become desirable to formally verify that the proofs
+                    indeed
+                    prove
+                    what
+                    they intend.
+                    This is an exciting new application area for verification and the goal of this workshop is to bring
+                    together
+                    practitioners from formal methods and cryptography, exploring opportunities and challenges at the
+                    intersection
+                    of formal methods and cryptographic proofs.
+                </p>
+                <p>
+                    The recent rapid progress in cryptographic proofs has been driven largely by interest in distributed
+                    ledger
+                    technology (blockchains). However, applications of these proof techniques range beyond this area to
+                    encompass
+                    assurance of proper functioning of components in complex machinery against Byzantine faults,
+                    guaranteeing
+                    authenticity and validity of distributed sensor readings, enabling decentralized communications,
+                    protecting
+                    sensitive data while allowing its analysis, and more. While the Boeing 777 and 787 flight control
+                    systems,
+                    the
+                    SpaceX Dragon, and other recent advanced systems incorporate Byzantine fault tolerance into their
+                    design,
+                    today's newer cryptographic proof techniques enable far more sophistication and space/time
+                    efficiency,
+                    at
+                    the
+                    cost of greater software complexity. Formal methods can ensure that the additional complexity does
+                    not
+                    mean
+                    reduced correctness.
+                </p>
+                <p>
+                    Zero knowledge (ZK) proofs comprise one cryptographic proof category of particular interest. A ZK
+                    proof
+                    allows
+                    one party to confirm if another party is aware of a value X without revealing X or any other
+                    information
+                    besides
+                    the other party's awareness of X. The complexity of modern ZK proofs make it hard to detect if the
+                    proofs
+                    are
+                    constructed correctly and if the verification steps of ZK proofs are implemented correctly. An
+                    invalid
+                    implementation can accept invalid proofs; this can pose serious consequences depending on the
+                    application.
+                    Correct-by-construction and formally verified implementations are highly desirable.
+                </p>
+                <p>
+                    Recent efforts have successfully brought formal methods to the broader field of cryptography. For
+                    instance,
+                    the
+                    Everest project [<a href="#3">3</a>] implements a formally verified set of cryptographic primitives
+                    like
+                    ciphers, MACs,
+                    elliptic
+                    curve signatures, and hash functions exposed via a standard interface. The project may one day
+                    provide a
+                    drop-in
+                    replacement for popular cryptographic toolkits. In the absence of such formal verification, simple
+                    implementation bugs have led to severe vulnerabilities in popular cryptographic packages like
+                    OpenSSL.
+                    The
+                    Heartbleed bug [<a href="#2">2</a>] for instance, was a buffer over-read, and a significant number
+                    of
+                    public facing
+                    web-servers
+                    were impacted. Efforts to verify memory access allow the full cryptographic stack to be verified.
+                </p>
+                <p>
+                    Even if progress is being made towards verification of cryptographic primitives, higher-level
+                    cryptographic
+                    proof implementations remain unverified, despite trends accelerating broad adoption of these proofs
+                    in
+                    the
+                    near
+                    future. This workshop brings together researchers and practitioners in relevant formal methods -
+                    including
+                    dependent typing and more - and cryptographic proofs to establish greater interaction between the
+                    fields,
+                    identify
+                    key opportunities of mutual interest, and accelerate the development and adoption of formal methods
+                    for
+                    cryptographic proofs. Emphasis is further placed on talks and papers that discuss broad
+                    cross-cutting
+                    themes
+                    around cryptographic proofs for Byzantine fault tolerance, data validation, and authentication;
+                    practical
+                    dependently typed proofs; and other formal methods relevant potentially applicable to cryptographic
+                    proofs.
+
+                </p>
+                REFERENCES:
+                <ul>
+                    <li>[<a name="0">0</a>]: <a href="https://eprint.iacr.org/2018/1188.pdf">Batching Techniques for
+                            Accumulators with Applications to IOPs and Stateless
+                            Blockchains</a> <i>IACR Cryptology ePrint Archive: Report 2018/1188.</i> Boneh, Dan. et al.
+                    </li>
+                    <li>[<a name="1">1</a>]: <a href="https://eprint.iacr.org/2017/1066.pdf">Bulletproofs: Short proofs
+                            for
+                            confidential transactions and more</a> <i>2018
+                            IEEE
+                            Symposium on Security and Privacy (SP). IEEE, 2018.</i> Bunz, Benedikt, et al. </li>
+                    <li>[<a name="2">2</a>]: <a
+                            href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160">CVE-2014-0160. OpenSSL
+                            Heartbleed.</a> <i>Webpage:
+                            <a
+                                href="https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160">https://cve.mitre.org/cgi-bin/cvename.cgi?name=cve-2014-0160</a>
+                            Accessed on 11/13/2019</i></li>
+                    <li>[<a name="3">3</a>]: <a
+                            href="http://drops.dagstuhl.de/opus/volltexte/2017/7119/pdf/LIPIcs-SNAPL-2017-1.pdf">Everest:
+                            Towards a Verified, Drop-in Replacement of HTTPS</a> <i>Proceedings of
+                            the
+                            Summit on Advances in Programming Languages (SNAPL). 2017.</i> Bhargavan, Karthikeyan et al.
+                    </li>
+                    <li>[<a name="4">4</a>]: <a
+                            href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.96.3183&rep=rep1&type=pdf">On
+                            diophantine complexity and statistical zero-knowledge arguments</a>
+                        <i>International Conference on the Theory and Application of Cryptology and Information
+                            Security.
+                            Springer, Berlin, Heidelberg, 2003.</i> Lipmaa, Helger.</li>
+                    <li>[<a name="5">5</a>]: <a href="https://eprint.iacr.org/2018/046.pdf">Scalable, transparent, and
+                            post-quantum secure computational integrity</a>
+                        <i>IACR
+                            Cryptology ePrint Archive 2018 (2018): 46.</i> Ben-Sasson, Eli, et al. </li>
+                    <li>[<a name=" 6">6</a>]: <a href="https://eprint.iacr.org/2013/879.pdf">Succinct Non-Interactive
+                            Zero
+                            Knowledge for a von Neumann Architecture</a>
+                        <i>23rd
+                            USENIX Security Symposium (USENIX Security 14). 2014.</i> Ben-Sasson, Eli, et al.</li>
+                </ul>
+            </section>
+
+        </div>
     </article>
 </body>
 
